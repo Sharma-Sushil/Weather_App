@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginPage">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        >
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/main" />
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="fitXY"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:id="@+id/idLoginWeatherIcon"
+            android:src="@drawable/weather"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textStyle="italic|bold"
+            android:textSize="25dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/idLoginWeatherIcon"
+            android:layout_marginTop="10dp"
+            android:id="@+id/idLoginAppName"/>
+
+    </RelativeLayout>
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/mainRLSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:background="@drawable/login_shape"
+        android:visibility="visible"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/idLLMain1"
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:layout_weight="4.5"
+
+                android:background="@android:color/transparent"
+                android:hint="Enter Email"
+                android:padding="5dp"
+                android:textColorHint="@color/blue_shade"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/idNewUserName"
+                    android:background="@android:color/transparent"
+                    android:importantForAutofill="no"
+                    android:textSize="14sp"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_shade"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/idLLMain1"
+            android:id="@+id/idLLMain2"
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:layout_weight="4.5"
+
+                android:background="@android:color/transparent"
+                android:hint="Password"
+                android:padding="2dp"
+                android:textColorHint="@color/blue_shade"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/idNewPassword"
+                    android:background="@android:color/transparent"
+                    android:importantForAutofill="no"
+                    android:textSize="14sp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_shade"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/idLLMain2"
+
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/idLLMain3"
+            android:weightSum="5">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="4.5"
+                android:background="@android:color/transparent"
+                android:hint="Confirm Password"
+                android:padding="2dp"
+                android:textColorHint="@color/blue_shade"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/idNewConfirmPassword"
+                    android:background="@android:color/transparent"
+                    android:importantForAutofill="no"
+                    android:textSize="14sp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_shade"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Sign-up"
+            android:onClick="setSignUpButton"
+
+            android:layout_below="@id/idLLMain3"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/idsignupButton"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idsignupButton"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/blue_shade"
+            android:text="Already a User ?"
+            android:textSize="17sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="italic|bold"
+            android:id="@+id/mainTVGoToSignIn"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/mainRLSignIn"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="460dp"
+        android:background="@drawable/login_shape"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/idLLSignInMain1"
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:layout_weight="4.5"
+
+                android:background="@android:color/transparent"
+                android:hint="Enter Email"
+                android:padding="5dp"
+                android:textColorHint="@color/blue_shade"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/idAlreadyUserName"
+                    android:background="@android:color/transparent"
+                    android:importantForAutofill="no"
+                    android:textSize="14sp"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_shade"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/idLLSignInMain1"
+            android:id="@+id/idLLSignInMain2"
+            android:layout_width="300dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="5">
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+
+                android:layout_margin="10dp"
+                android:layout_weight="4.5"
+
+                android:background="@android:color/transparent"
+                android:hint="Password"
+                android:padding="2dp"
+                android:textColorHint="@color/blue_shade"
+                >
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/idAlreadyUserPassword"
+                    android:background="@android:color/transparent"
+                    android:importantForAutofill="no"
+                    android:textSize="14sp"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:textColor="@color/blue_shade"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Sign-in"
+            android:onClick="setSignInButton"
+
+            android:layout_below="@id/idLLSignInMain2"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/idsigninButton"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/idsigninButton"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/blue_shade"
+            android:text="New User ?"
+            android:textSize="17sp"
+            android:layout_marginTop="20dp"
+            android:textStyle="italic|bold"
+            android:id="@+id/mainTVGoToSignUp"/>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
